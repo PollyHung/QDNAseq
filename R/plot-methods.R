@@ -66,9 +66,9 @@ setMethod("plot", signature(x="QDNAseqSignals", y="missing"),
     if (doCalls) {
         if (is.null(ylim))
             if (logTransform) {
-                ylim <- c(-3, 3)
+                ylim <- c(-2, 2)
             } else {
-                ylim <- c(-3, 3)
+                ylim <- c(-2, 2)
             }
     }
     if ("copynumber" %in% assayDataElementNames(x)) {
@@ -77,9 +77,9 @@ setMethod("plot", signature(x="QDNAseqSignals", y="missing"),
             ylab <- ifelse(logTransform, expression(log[2]~ratio), "ratio")
         if (is.null(ylim))
             if (logTransform) {
-                ylim <- c(-3, 3)
+                ylim <- c(-2, 2)
             } else {
-                ylim <- c(3, 3)
+                ylim <- c(2, 2)
             }
         if (is.null(yaxp))
             yaxp <- c(ylim[1], ylim[2], ylim[2]-ylim[1])
